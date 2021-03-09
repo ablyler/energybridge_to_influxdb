@@ -101,7 +101,7 @@ func main() {
 	}
 
 	broker := fmt.Sprintf("tcp://%s:2883", *energyBridgeHost)
-	const topic = "event/metering/instantaneous_demand"
+	const topic = "event/metering/summation/minute"
 
 	var connectHandler mqtt.OnConnectHandler = func(client mqtt.Client) {
 		log.Printf("connected to %s with client ID %s", broker, *clientId)
